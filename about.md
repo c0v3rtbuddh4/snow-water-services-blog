@@ -18,5 +18,5 @@ permalink: /about/
   </ul>
   <h2 id="contact">Get in touch</h2>
   <p>This GitHub Pages version is a static website, so it does not process contact forms by itself. To publish a contact email, replace the example address below with the address you want readers to use.</p>
-  <p><a class="text-link" href="mailto:YOUR-EMAIL@example.com?subject=SNOW%20journal%20enquiry">Email SNOW →</a></p>
+  <p><a class="text-link" href="mailto:23779244@student.uwa.edu.au?subject=SNOW%20journal%20enquiry">Email SNOW →</a></p>
 </div>
