@@ -1,0 +1,20 @@
+---
+layout: page
+title: The SNOW journal
+description: "Articles, explainers and field notes about water services and the systems that shape them."
+permalink: /journal/
+---
+<div class="grid journal-grid">
+  {% for post in site.posts %}
+  <article class="card wave-link">
+    <a class="card-link" href="{{ post.url | relative_url }}">
+      <span class="tag">{% if post.category %}{{ post.category }}{% elsif post.categories.size > 0 %}{{ post.categories | first }}{% else %}SNOW journal{% endif %}</span>
+      <h3>{{ post.title }}</h3>
+      <p>{% if post.excerpt %}{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
+      <span class="read">{{ post.date | date: "%-d %B %Y" }} · Read article →</span>
+      <span class="watermark" aria-hidden="true">∿</span>
+    </a>
+  </article>
+  {% endfor %}
+</div>
+{% if site.posts.size == 0 %}<div class="empty-state"><p>Your articles will appear here when you add Markdown files to <code>_posts</code>.</p></div>{% endif %}

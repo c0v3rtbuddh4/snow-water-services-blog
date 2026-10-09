@@ -1,0 +1,24 @@
+title: "snow-water-services-blog"
+description: "A visual journal exploring how water services work, who they serve, and how we can build fairer, more resilient systems."
+url: "https://c0v3rtbuddh4.github.io"
+baseurl: "/snow-water-services-blog"
+lang: "en-AU"
+timezone: "Australia/Perth"
+markdown: kramdown
+permalink: /journal/:year/:month/:day/:title/
+paginate: 6
+paginate_path: "/page/:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+header_pages:
+  - about.md
+  - faq.md
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - vendor
+  - node_modules

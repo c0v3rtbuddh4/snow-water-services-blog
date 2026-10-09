@@ -1,0 +1,83 @@
+---
+layout: default
+title: Home
+description: "Explore water services, infrastructure, communities and justice through SNOW."
+---
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">SNOW · water services · justice · sustainability</div>
+    <h1>Following the flow of water, people &amp; systems.</h1>
+    <p>A visual journal exploring how water services work, who they serve, and how we can build fairer, more resilient systems.</p>
+    <a class="cta wave-link" href="{{ '/#stories' | relative_url }}">Explore the journal <span aria-hidden="true">↓</span></a>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="glow"></div><div class="orbit"></div><div class="orbit orbit-two"></div>
+    <span class="mini mini-one"></span><span class="mini mini-two"></span><span class="mini mini-three"></span>
+    <div class="droplet"></div><div class="stream"></div>
+  </div>
+</section>
+
+<section class="section" id="stories">
+  <div class="section-head">
+    <div><div class="eyebrow">The SNOW journal</div><h2>Stories you can step into.</h2></div>
+    <p>Field notes, explainers and visual stories about the systems behind everyday water services. Open an article to read the full story.</p>
+  </div>
+  <div class="grid">
+    {% for post in site.posts limit:6 %}
+    <article class="card wave-link">
+      <a class="card-link" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+        <span class="tag">{% if post.category %}{{ post.category }}{% elsif post.categories.size > 0 %}{{ post.categories | first }}{% else %}SNOW journal{% endif %}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{% if post.excerpt %}{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 150 }}{% endif %}</p>
+        <span class="read">Read article <span aria-hidden="true">→</span></span>
+        <span class="watermark" aria-hidden="true">∿</span>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+  {% if site.posts.size == 0 %}
+  <div class="empty-state"><p>No articles yet. Add a Markdown file to the <code>_posts</code> folder to publish your first story.</p></div>
+  {% endif %}
+  <div class="section-action"><a class="text-link" href="{{ '/journal/' | relative_url }}">Browse all articles →</a></div>
+</section>
+
+<section class="section" id="explore">
+  <div class="section-head">
+    <div><div class="eyebrow">Explore SNOW</div><h2>More than the posts.</h2></div>
+    <p>Water services connect infrastructure, ecosystems, public health, finance and daily life. Explore the ideas behind the journal.</p>
+  </div>
+  <div class="grid">
+    <article class="card wave-link"><a class="card-link" href="{{ '/about/' | relative_url }}"><span class="tag">01 · About</span><h3>Meet SNOW</h3><p>Why we look at water services through a systems lens, and what the journal is here to explore.</p><span class="read">About the journal →</span></a></article>
+    <article class="card wave-link"><a class="card-link" href="{{ '/faq/' | relative_url }}"><span class="tag">02 · FAQ</span><h3>Questions, answered.</h3><p>Quick explanations and practical questions behind the bigger stories.</p><span class="read">Browse FAQs →</span></a></article>
+    <article class="card wave-link"><a class="card-link" href="{{ '/journal/' | relative_url }}"><span class="tag">03 · Journal</span><h3>Follow the flow.</h3><p>Browse the latest articles on access, climate, governance and the future of water.</p><span class="read">Browse articles →</span></a></article>
+  </div>
+</section>
+
+<section class="section" id="tools">
+  <div class="section-head">
+    <div><div class="eyebrow">Play with the system</div><h2>See water differently.</h2></div>
+    <p>Small interactive tools make the hidden mechanics of water services tangible.</p>
+  </div>
+  <div class="feature-bar">
+    <div class="interactive-panel">
+      <div class="tag">Ripple map</div><h3>Click the water.</h3>
+      <p>Each interaction sends a new ripple through the system.</p>
+      <button class="ripple" id="ripple" type="button" aria-label="Create a ripple"></button>
+    </div>
+    <div class="interactive-panel">
+      <div class="tag">Demand pulse</div><h3 id="demandLabel">Household demand · 62%</h3>
+      <div class="meter" aria-hidden="true"><span id="demandMeter"></span></div>
+      <div class="toolrow">
+        <button type="button" data-demand="38">Drought</button>
+        <button type="button" data-demand="62">Typical</button>
+        <button type="button" data-demand="86">Peak day</button>
+      </div>
+      <p id="demandText" aria-live="polite">A typical service day: steady demand with room for resilience.</p>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe" id="subscribe">
+  <div><div class="eyebrow">Stay connected</div><h2>Follow SNOW.</h2><p>Want to suggest a topic or discuss a story? Get in touch with the journal.</p></div>
+  <a class="cta wave-link" href="{{ '/about/' | relative_url }}#contact">Contact SNOW <span aria-hidden="true">→</span></a>
+</section>

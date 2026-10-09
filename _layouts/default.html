@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-AU' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != 'Home' %}{{ page.title | escape }} · {% endif %}SNOW — Water, services &amp; justice</title>
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+  <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</head>
+<body>
+  <main class="root">
+    <div class="page-droplets" aria-hidden="true"><span class="page-droplet pd1"></span><span class="page-droplet pd2"></span><span class="page-droplet pd3"></span><span class="page-droplet pd4"></span><span class="page-droplet pd5"></span></div>
+    <nav class="river-nav" aria-label="Page navigation">
+      <svg viewBox="0 0 58 310" aria-hidden="true"><path class="river-path" d="M42 8 C8 42,52 67,24 101 S12 157,42 194 S50 257,24 302"/><path class="river-highlight" d="M42 8 C8 42,52 67,24 101 S12 157,42 194 S50 257,24 302"/></svg>
+      <a class="river-stop s1" href="{{ '/' | relative_url }}" aria-label="Home"><span class="river-label">Home</span></a>
+      <a class="river-stop s2" href="{{ '/journal/' | relative_url }}" aria-label="Journal"><span class="river-label">Journal</span></a>
+      <a class="river-stop s3" href="{{ '/about/' | relative_url }}" aria-label="About"><span class="river-label">About</span></a>
+      <a class="river-stop s4" href="{{ '/faq/' | relative_url }}" aria-label="FAQ"><span class="river-label">FAQ</span></a>
+    </nav>
+    <header class="nav">
+      <a class="brand" href="{{ '/' | relative_url }}"><span class="mark" aria-hidden="true"></span><span>SNOW</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a class="wave-link" href="{{ '/journal/' | relative_url }}">Journal</a>
+        <a class="wave-link" href="{{ '/about/' | relative_url }}">About</a>
+        <a class="wave-link" href="{{ '/faq/' | relative_url }}">FAQ</a>
+      </nav>
+      <a class="nav-cta wave-link" href="{{ '/' | relative_url }}#subscribe">Get in touch</a>
+    </header>
+    {{ content }}
+    <footer class="footer"><span>SNOW · WATER SERVICES IN A CHANGING WORLD</span><span>Evidence · systems · people</span></footer>
+  </main>
+</body>
+</html>

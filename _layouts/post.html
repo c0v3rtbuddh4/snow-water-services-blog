@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="article-wrap">
+  <header class="article-header">
+    <a class="back-link" href="{{ '/journal/' | relative_url }}">← All articles</a>
+    <div class="eyebrow article-kicker">{% if page.category %}{{ page.category }}{% elsif page.categories.size > 0 %}{{ page.categories | first }}{% else %}SNOW journal{% endif %}</div>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.excerpt %}<p class="article-deck">{{ page.excerpt | strip_html }}</p>{% endif %}
+    <div class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      {% if page.author %}<span>·</span><span>{{ page.author }}</span>{% endif %}
+    </div>
+  </header>
+  {% if page.cover_image %}
+  <figure class="article-cover"><img src="{{ page.cover_image | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}"></figure>
+  {% endif %}
+  <div class="article-content">{{ content }}</div>
+  {% if page.references %}
+  <section class="references"><h2>References and further reading</h2><ul>{% for reference in page.references %}<li>{{ reference }}</li>{% endfor %}</ul></section>
+  {% endif %}
+  <div class="article-end"><span class="tag">Keep following the flow</span><p>Explore more SNOW stories about water services, infrastructure, people and justice.</p><a class="cta wave-link" href="{{ '/journal/' | relative_url }}">More articles →</a></div>
+</article>
