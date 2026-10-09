@@ -2,7 +2,7 @@
 
 layout: post
 title: "Understanding Water Reuse"
-date: 2026-11-02
+date: 2026-10-09
 category: "Water Reuse"
 author: "SNOW"
 excerpt: "An introduction to how water reuse can contribute to more resilient water services."
