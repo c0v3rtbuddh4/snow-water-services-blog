@@ -8,6 +8,8 @@ excerpt: "What changes when the network reaches a neighbourhood but reliable ser
 ---
 Water infrastructure is often described through the assets that make a service possible: pipes, pumps, treatment plants, reservoirs and connections. But the existence of a network does not always mean that every household experiences a reliable, safe or affordable service.
 
+![Water reuse treatment process]({{ '/assets/images/Wastwater - Group Blog - Figure 2 (Chat).png' | relative_url }})
+
 The idea of the **last kilometre** is a reminder to look beyond the main network and ask what happens at the point where a service meets people's lives. Are connections available? Is the supply reliable? Can households afford the service? Are there barriers that affect some communities more than others?
 
 ## Look beyond the map
