@@ -175,3 +175,12 @@ button{color:inherit}
 .vlog-references h3{margin:0 0 14px;font-size:20px;color:var(--text,#e7f5f7)}
 .vlog-references li{font-size:13px;line-height:1.55;padding-bottom:10px}
 @media(max-width:600px){.references-list{padding:22px 18px}.vlog-references li{font-size:12px}}
+
+
+/* Smaller reference lists */
+.references,
+.references li,
+.references p {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
