@@ -1,20 +1,47 @@
 ---
-layout: page
-title: The SNOW journal
-description: "Articles, explainers and field notes about water services and the systems that shape them."
+layout: journal-section
+title: "What Are Water Services and Why Do They Matter?"
+description: "What water services are, why they matter, and how they shape everyday life."
 permalink: /journal/
+section_number: 1
+section_label: "Section 1 · Introduction"
+section_card_title: "Introduction"
+section_type: "Introduction"
+section_transition: "Start here: what water services are, why they matter, and how they shape daily life."
+next_section_title: "Section 2 – The Issues and Their Impacts"
+next_section_url: "/journal/section-2/"
+next_section_description: "The pressures facing water infrastructure, what “just” and “sustainable” mean, and what getting the balance right could look like."
 ---
-<div class="grid journal-grid">
-  {% for post in site.posts %}
-  <article class="card wave-link">
-    <a class="card-link" href="{{ post.url | relative_url }}">
-      <span class="tag">{% if post.category %}{{ post.category }}{% elsif post.categories.size > 0 %}{{ post.categories | first }}{% else %}SNOW journal{% endif %}</span>
-      <h3>{{ post.title }}</h3>
-      <p>{% if post.excerpt %}{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
-      <span class="read">{{ post.date | date: "%-d %B %Y" }} · Read article →</span>
-      <span class="watermark" aria-hidden="true">∿</span>
-    </a>
-  </article>
-  {% endfor %}
-</div>
-{% if site.posts.size == 0 %}<div class="empty-state"><p>Your articles will appear here when you add Markdown files to <code>_posts</code>.</p></div>{% endif %}
+
+<p>Water is a fundamental resource required by all life on Earth; it is used for transport and provides the medium in which chemical reactions occur (NASA Astrobiology, 2026). We humans are no exception, yet in everyday life it is easy to overlook the services that make reliable access to water possible, and to take them for granted.</p>
+<p>When you fill a glass of water and take a drink, do you ever think about the water itself? We find that when people do think about water, the focus of mainstream discussion is usually on its availability or scarcity. However, even an abundant water supply only becomes useful to society when it can be collected, treated, transported and used, and the resulting wastewater disposed of effectively.</p>
+<p>This is where water services come in.</p>
+<h3><strong>What are water services?</strong></h3>
+<p>Water services are the infrastructure and systems used to supply and manage water for a society. In Western Australia, the <em>Water Services Act 2012</em> (WA) defines a water service as a water supply, sewerage, irrigation or drainage service. So, water services extend well beyond simply supplying us with drinking water. They include the infrastructure required to transport, treat and store water, and to get rid of the resulting wastewater after we use it.</p>
+<p>A typical water service system involves a number of components, including the water source, collection infrastructure, treatment facilities, storage reservoirs, pumping systems and the networks of pipes that distribute the water. And let’s not forget that once water has been used, sewerage and wastewater systems collect and treat it too (Global Water Partnership, 2026).</p>
+<p>The importance of an effective water service system is particularly apparent in Western Australia, where Perth can no longer rely on rainfall and dams in the way it once did. Water Corporation (2026) reports that declining rainfall and streamflow have significantly changed Perth’s water supply, resulting in greater reliance on groundwater and desalination. One of Perth’s desalination plants is shown below.</p>
+<figure class="journal-figure"><img src="{{ '/assets/images/wastewater-figure-01.jpeg' | relative_url }}" alt="Perth Seawater Desalination Plant, Kwinana"><figcaption>Perth Seawater Desalination Plant, Kwinana (Water Corporation, 2024)</figcaption></figure>
+<p>This highlights an important feature of water services: they are not static. Water services must respond to changing populations, shifting industrial requirements and, increasingly, changing climate conditions and changing availability of water resources. Providing a reliable supply is therefore very complicated, and requires long-term planning, infrastructure and continuous management. Water services need to plan not only for today’s population, but for future generations too.</p>
+<h2><strong>Water services: domestic and industrial</strong></h2>
+<p>The importance of water services can be considered from two perspectives: domestic use and industrial use.</p>
+<h3><strong>Domestic</strong></h3>
+<p>At a domestic level, water services are fundamental to our health and everyday life. Water is required for drinking, food preparation, cleaning and personal hygiene. The World Health Organization (WHO, 2023) identifies safe and readily available water as an important requirement for public health, and states that improved water supply, sanitation and water resource management can also contribute to economic development and poverty reduction.</p>
+<p>Inadequate or poorly managed water services expose communities to preventable health risks (WHO, 2023). Contaminated water and poor sanitation are associated with diseases such as cholera, diarrhoea and polio (Howard et al., 2020), with more shown below.</p>
+<figure class="journal-figure"><img src="{{ '/assets/images/wastewater-figure-02.png' | relative_url }}" alt="Classification of water-related diseases"><figcaption>Classification of water-related diseases (Howard et al., 2020)</figcaption></figure>
+<p>Where people do not receive water services, significant time and effort are needed to collect water, which can affect education, employment and household finances. Access to safe and affordable drinking water is therefore not simply a matter of convenience; it is closely connected to public health, wellbeing, and economic and educational opportunity.</p>
+<h3><strong>Industrial</strong></h3>
+<p>Water services are equally important to industry, although the way water is used can be quite different. Water can be a direct input to industrial processes, as well as being needed for cleaning, cooling, dust suppression, transport and many other activities.</p>
+<p>Mining provides a relevant example in Western Australia. Water is used across mine sites for activities including mineral processing, ore slurries, cooling, equipment washing and dust suppression (Moerk Water, 2024). To put this in context, the Western Australian mining industry is estimated to use approximately 1,000 GL of water per year (Moerk Water, 2024).</p>
+<figure class="journal-figure"><img src="{{ '/assets/images/wastewater-figure-03.jpeg' | relative_url }}" alt="Water truck spraying a mine haul road to suppress dust"><figcaption>Water truck spraying a mine haul road to suppress dust (Adams, 2021)</figcaption></figure>
+<p>Beyond mining, many other industries depend on water services, which means water services are closely tied to the ability of industries to operate successfully. Whether it’s a processing plant, a mine site, a construction site or simply a restaurant kitchen, it needs more than equipment, raw materials or food. It also needs reliable water infrastructure.</p>
+<h2><strong>Why water services matter</strong></h2>
+<p>Water services provide much more than just the drinking water that comes out of our taps. They protect public health, support communities and enable industries to operate.</p>
+<p>On top of this, the Australian Bureau of Statistics (ABS, 2025) reports that total water consumption by Australian industries and households is increasing: 17,223 GL in 2023–24, compared with 15,258 GL in 2022–23. The pressure on water services is only going to keep growing.</p>
+<p>Water services may largely go unnoticed when they are working well, but when they fail, every part of society notices. From providing safe drinking water to supporting large-scale industrial operations, water services directly affect our health, economy and quality of life. They are something we simply can’t live without.</p>
+<h2><em><strong>Where to next?</strong></em></h2>
+<p><em>Now that we know what water services are and why they matter, the rest of this blog explores one big question: how can sustainable and just water services be provided and enhanced into the future? Each section can be read on its own, but they are designed to be read in order, with each one building on the last.</em></p>
+<p class="section-transition"><span aria-hidden="true">→ </span><a href="{{ '/journal/section-2/' | relative_url }}">Section 2 – The Issues and Their Impacts</a>: the pressures facing water infrastructure, what “just” and “sustainable” really mean, and what getting the balance right could look like. Start here.</p>
+<p class="section-transition"><span aria-hidden="true">→ </span><a href="{{ '/journal/section-3/' | relative_url }}">Section 3 – Case Study 1</a>: Ctrl + Alt + Drought. What happens when a thirsty data centre meets a city running dry in Uruguay?</p>
+<p class="section-transition"><span aria-hidden="true">→ </span><a href="{{ '/journal/section-4/' | relative_url }}">Section 4 – Case Study 2</a>: Perth’s Groundwater Replenishment Scheme. Sustainable? Absolutely. But is it just?</p>
+<p class="section-transition"><span aria-hidden="true">→ </span><a href="{{ '/journal/section-5/' | relative_url }}">Section 5 – What Happens When It’s Done Right</a>: what it takes to make better water services work in the real world, and how it all connects back to the SDGs.</p>
+<p class="vlog-prompt">Our vlog tells the same story in under 12 minutes. You’ll be prompted to watch it once you finish Section 2, or you can <a href="#vlog-modal" data-vlog-open>watch it now</a>.</p>

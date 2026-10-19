@@ -19,26 +19,23 @@ description: "Explore water services, infrastructure, communities and justice th
 
 <section class="section" id="stories">
   <div class="section-head">
-    <div><div class="eyebrow">The SNOW journal</div><h2>Stories you can step into.</h2></div>
-    <p>Field notes, explainers and visual stories about the systems behind everyday water services. Open an article to read the full story.</p>
+    <div><div class="eyebrow">The SNOW journal</div><h2>A story in five sections.</h2></div>
+    <p>Start with the introduction, then follow the connections between infrastructure, justice, real-world case studies and the decisions that shape a better water future. You can also jump directly to any section.</p>
   </div>
-  <div class="grid">
-    {% for post in site.posts limit:6 %}
-    <article class="card wave-link">
-      <a class="card-link" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
-        <span class="tag">{% if post.category %}{{ post.category }}{% elsif post.categories.size > 0 %}{{ post.categories | first }}{% else %}SNOW journal{% endif %}</span>
-        <h3>{{ post.title }}</h3>
-        <p>{% if post.excerpt %}{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 150 }}{% endif %}</p>
-        <span class="read">Read article <span aria-hidden="true">→</span></span>
+  {% assign journal_sections = site.pages | where_exp: "item", "item.section_number" | sort: "section_number" %}
+  <div class="grid section-card-grid">
+    {% for section in journal_sections %}
+    <article class="card section-card wave-link">
+      <a class="card-link" href="{{ section.url | relative_url }}">
+        <span class="tag">Section {{ section.section_number }} · {{ section.section_type }}</span>
+        <h3>{{ section.section_card_title }}</h3>
+        <p>{{ section.section_transition }}</p>
+        <span class="read">{% if section.section_number == 1 %}Start reading{% else %}Open section {{ section.section_number }}{% endif %} <span aria-hidden="true">→</span></span>
         <span class="watermark" aria-hidden="true">∿</span>
       </a>
     </article>
     {% endfor %}
   </div>
-  {% if site.posts.size == 0 %}
-  <div class="empty-state"><p>No articles yet. Add a Markdown file to the <code>_posts</code> folder to publish your first story.</p></div>
-  {% endif %}
-  <div class="section-action"><a class="text-link" href="{{ '/journal/' | relative_url }}">Browse all articles →</a></div>
 </section>
 
 <section class="section" id="explore">
@@ -49,7 +46,7 @@ description: "Explore water services, infrastructure, communities and justice th
   <div class="grid">
     <article class="card wave-link"><a class="card-link" href="{{ '/about/' | relative_url }}"><span class="tag">01 · About</span><h3>Meet SNOW</h3><p>Why we look at water services through a systems lens, and what the journal is here to explore.</p><span class="read">About the journal →</span></a></article>
     <article class="card wave-link"><a class="card-link" href="{{ '/faq/' | relative_url }}"><span class="tag">02 · FAQ</span><h3>Questions, answered.</h3><p>Quick explanations and practical questions behind the bigger stories.</p><span class="read">Browse FAQs →</span></a></article>
-    <article class="card wave-link"><a class="card-link" href="{{ '/journal/' | relative_url }}"><span class="tag">03 · Journal</span><h3>Follow the flow.</h3><p>Browse the latest articles on access, climate, governance and the future of water.</p><span class="read">Browse articles →</span></a></article>
+    <article class="card wave-link"><a class="card-link" href="{{ '/journal/' | relative_url }}"><span class="tag">03 · Journal</span><h3>Start at the introduction.</h3><p>Open the introduction, then move between all five connected sections.</p><span class="read">Open the journal →</span></a></article>
   </div>
 </section>
 

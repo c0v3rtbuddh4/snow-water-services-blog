@@ -31,5 +31,18 @@
     {{ content }}
     <footer class="footer"><span>SNOW · WATER SERVICES IN A CHANGING WORLD</span><span>Evidence · systems · people</span></footer>
   </main>
+
+  <div class="vlog-modal" id="vlog-modal" hidden>
+    <div class="vlog-modal-backdrop" data-vlog-close></div>
+    <section class="vlog-dialog" role="dialog" aria-modal="true" aria-labelledby="vlog-title" aria-describedby="vlog-description">
+      <button class="vlog-close" type="button" data-vlog-close aria-label="Close vlog">×</button>
+      <div class="eyebrow">Before you continue</div>
+      <h2 id="vlog-title">The story in under 12 minutes.</h2>
+      <p id="vlog-description">Watch the group vlog before moving to your selected section. When you’re ready, continue to your chosen destination.</p>
+      <div class="vlog-video"><iframe id="vlog-frame" title="SNOW group blog vlog about water services, sustainability and justice" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <div class="vlog-actions"><button class="cta wave-link" id="vlog-continue" type="button">Continue to selected section →</button><button class="text-link" type="button" data-vlog-close>Close and stay here</button></div>
+    </section>
+  </div>
+
 </body>
 </html>

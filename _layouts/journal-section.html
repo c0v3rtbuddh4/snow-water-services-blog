@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="article-wrap journal-section">
+  <header class="article-header">
+    <a class="back-link" href="{{ '/' | relative_url }}#stories">← All five sections</a>
+    <div class="eyebrow article-kicker">{{ page.section_label }}</div>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="article-deck">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="article-content">{{ content }}</div>
+  {% if page.next_section_url %}
+  <div class="next-section-panel">
+    <div class="eyebrow">Continue the story</div>
+    <h2>{{ page.next_section_title }}</h2>
+    <p>{{ page.next_section_description }}</p>
+    <a class="cta wave-link" href="{{ page.next_section_url | relative_url }}" {% if page.section_number == 2 %}data-vlog-gate data-vlog-title="{{ page.next_section_title | escape }}"{% endif %}>Continue to the next section <span aria-hidden="true">→</span></a>
+  </div>
+  {% endif %}
+  <section class="section-map" aria-labelledby="section-map-title">
+    <div class="section-head"><div><div class="eyebrow">Keep exploring</div><h2 id="section-map-title">Jump to a section.</h2></div><p>The sections are connected, but you can revisit any part of the story at any time.</p></div>
+    {% assign journal_sections = site.pages | where_exp: "item", "item.section_number" | sort: "section_number" %}
+    <div class="grid section-map-grid">
+      {% for section in journal_sections %}
+      <article class="card section-map-card">
+        {% if section.section_number == page.section_number %}
+        <div class="card-link current-section" aria-current="page"><span class="tag">Section {{ section.section_number }} · You are here</span><h3>{{ section.section_card_title }}</h3><p>{{ section.section_transition }}</p><span class="read">Current section</span></div>
+        {% else %}
+        <a class="card-link" href="{{ section.url | relative_url }}" {% if page.section_number == 2 %}data-vlog-gate data-vlog-title="{{ section.section_card_title | escape }}"{% endif %}><span class="tag">Section {{ section.section_number }} · {{ section.section_type }}</span><h3>{{ section.section_card_title }}</h3><p>{{ section.section_transition }}</p><span class="read">Open section {{ section.section_number }} →</span></a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</article>
