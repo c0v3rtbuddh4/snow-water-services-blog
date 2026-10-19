@@ -177,10 +177,27 @@ button{color:inherit}
 @media(max-width:600px){.references-list{padding:22px 18px}.vlog-references li{font-size:12px}}
 
 
+
 /* Smaller reference lists */
+.references-list,
+.references-list li,
+.references-list p,
+.references-list a,
 .references,
 .references li,
-.references p {
+.references p,
+.references a,
+.vlog-references,
+.vlog-references li,
+.vlog-references p,
+.vlog-references a {
   font-size: 0.75rem;
   line-height: 1.5;
+}
+
+/* Keep reference headings readable */
+.references-list h2,
+.references h2,
+.vlog-references h3 {
+  font-size: 1.1rem;
 }
