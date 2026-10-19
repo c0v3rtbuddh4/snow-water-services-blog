@@ -10,6 +10,9 @@ This is a **patch** for the existing SNOW Jekyll/GitHub Pages website, not a rep
 - Every destination link in Section 2's end navigation opens the group vlog first; the reader can then continue to the chosen section.
 - The vlog can also be opened from the introduction and the final thank-you paragraph.
 - The eight figures and captions in the supplied completed draft are included.
+- The supplied references are appended to each section before the Continue the Story panel.
+- The vlog popup includes its eight supplied references below the Continue / Close and stay here options.
+- The right-side river navigation is hidden on Sections 2–5.
 
 ## Upload carefully
 1. Download and extract this ZIP.
@@ -22,4 +25,4 @@ This is a **patch** for the existing SNOW Jekyll/GitHub Pages website, not a rep
 The patch uses the existing Jekyll `relative_url` configuration, so it should continue to work with your repository's current `url` and `baseurl` settings.
 
 ## Content note
-Section text and figure captions are drawn from `Group Wastewater Blog - Final Draft.docx`. In-text citations are retained as supplied. The document does not contain a full references section, so this patch does not invent or append one.
+Section text and figure captions are drawn from `Group Wastewater Blog - Final Draft.docx`. In-text citations are retained as supplied. Section references are drawn from `Group Wastewater Blog - Final References.docx`; vlog references are reproduced from the supplied user message.

@@ -12,6 +12,7 @@
 <body>
   <main class="root">
     <div class="page-droplets" aria-hidden="true"><span class="page-droplet pd1"></span><span class="page-droplet pd2"></span><span class="page-droplet pd3"></span><span class="page-droplet pd4"></span><span class="page-droplet pd5"></span></div>
+    {% unless page.section_number >= 2 and page.section_number <= 5 %}
     <nav class="river-nav" aria-label="Page navigation">
       <svg viewBox="0 0 58 310" aria-hidden="true"><path class="river-path" d="M42 8 C8 42,52 67,24 101 S12 157,42 194 S50 257,24 302"/><path class="river-highlight" d="M42 8 C8 42,52 67,24 101 S12 157,42 194 S50 257,24 302"/></svg>
       <a class="river-stop s1" href="{{ '/' | relative_url }}" aria-label="Home"><span class="river-label">Home</span></a>
@@ -19,6 +20,7 @@
       <a class="river-stop s3" href="{{ '/about/' | relative_url }}" aria-label="About"><span class="river-label">About</span></a>
       <a class="river-stop s4" href="{{ '/faq/' | relative_url }}" aria-label="FAQ"><span class="river-label">FAQ</span></a>
     </nav>
+    {% endunless %}
     <header class="nav">
       <a class="brand" href="{{ '/' | relative_url }}"><span class="mark" aria-hidden="true"></span><span>SNOW</span></a>
       <nav class="navlinks" aria-label="Main navigation">
@@ -41,6 +43,19 @@
       <p id="vlog-description">Watch the group vlog before moving to your selected section. When you’re ready, continue to your chosen destination.</p>
       <div class="vlog-video"><iframe id="vlog-frame" title="SNOW group blog vlog about water services, sustainability and justice" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
       <div class="vlog-actions"><button class="cta wave-link" id="vlog-continue" type="button">Continue to selected section →</button><button class="text-link" type="button" data-vlog-close>Close and stay here</button></div>
+      <section class="vlog-references" aria-labelledby="vlog-references-title">
+        <h3 id="vlog-references-title">Vlog references</h3>
+        <ol>
+          <li>Best Music BS. (2021, February 16). <em>Celebration sound effect</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=UoSMKxjnleo" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=UoSMKxjnleo</a></li>
+          <li>Hendrickson, M. J. (2008, April 7). <em>Samuel Barber – Adagio for strings</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=izQsgE0L450" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=izQsgE0L450</a></li>
+          <li>Marrone, R. (2016, August 1). <em>The Hippo Roller: A water collection solution</em>. The Borgen Project. <a href="https://borgenproject.org/hippo-roller-water-collection-solution/" target="_blank" rel="noopener noreferrer">https://borgenproject.org/hippo-roller-water-collection-solution/</a></li>
+          <li>Mjoli, N. P. (2012). <em>Evaluation of sanitation upgrading programmes: The case of the bucket eradication programme</em> (WRC Report No. 2016/1/12). Water Research Commission. <a href="https://www.wrc.org.za/wp-content/uploads/wpfd/627/6a4caeb4d48cb.pdf" target="_blank" rel="noopener noreferrer">https://www.wrc.org.za/wp-content/uploads/wpfd/627/6a4caeb4d48cb.pdf</a></li>
+          <li>Omer, S. (2025, March 6). <em>Global water crisis: Facts, FAQs, and how to help</em>. World Vision. <a href="https://www.worldvision.org/clean-water-news-stories/global-water-crisis-facts" target="_blank" rel="noopener noreferrer">https://www.worldvision.org/clean-water-news-stories/global-water-crisis-facts</a></li>
+          <li>Phaliso, S., &amp; Mbovane, T. (2024, October 11). <em>31 years into democracy and the bucket system isn’t going away any time soon</em>. GroundUp. <a href="https://groundup.org.za/article/31-years-into-democracy-and-the-bucket-system-isnt-going-away-any-time-soon/" target="_blank" rel="noopener noreferrer">https://groundup.org.za/article/31-years-into-democracy-and-the-bucket-system-isnt-going-away-any-time-soon/</a></li>
+          <li>Tchaikovsky, P. I. (1889). <em>The sleeping beauty, Op. 66: Act 1, The spell</em> [Ballet score].</li>
+          <li>UN-Water. (n.d.). <em>Water and climate change</em>. <a href="https://www.unwater.org/water-facts/water-and-climate-change" target="_blank" rel="noopener noreferrer">https://www.unwater.org/water-facts/water-and-climate-change</a></li>
+        </ol>
+      </section>
     </section>
   </div>
 

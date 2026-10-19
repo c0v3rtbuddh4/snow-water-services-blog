@@ -162,3 +162,16 @@ button{color:inherit}
 .reference-list { padding-left: 1.5rem; }
 .reference-list li { margin: 0 0 .85rem; padding-left: .25rem; color: var(--muted, #b3cbd0); overflow-wrap: anywhere; line-height: 1.65; }
 .reference-list a { color: var(--accent, #5ce1e6); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Reference lists */
+.references-list{margin:38px 0 34px;padding:28px 30px;border:1px solid var(--line,#315a63);border-radius:22px;background:rgba(14,43,51,.58)}
+.references-list h2{margin:6px 0 20px;font-size:clamp(26px,3vw,36px)}
+.references-list ol,.vlog-references ol{padding-left:24px;margin:0}
+.references-list li,.vlog-references li{padding:0 0 12px 5px;overflow-wrap:anywhere;line-height:1.65;color:var(--muted,#b4cbd1)}
+.references-list li:last-child,.vlog-references li:last-child{padding-bottom:0}
+.references-list a,.vlog-references a{color:var(--accent,#5de6e7);text-decoration:underline;text-underline-offset:3px}
+.vlog-dialog{max-height:90vh;overflow-y:auto}
+.vlog-references{margin-top:28px;padding-top:22px;border-top:1px solid var(--line,#315a63)}
+.vlog-references h3{margin:0 0 14px;font-size:20px;color:var(--text,#e7f5f7)}
+.vlog-references li{font-size:13px;line-height:1.55;padding-bottom:10px}
+@media(max-width:600px){.references-list{padding:22px 18px}.vlog-references li{font-size:12px}}
