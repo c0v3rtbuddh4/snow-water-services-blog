@@ -156,3 +156,9 @@ button{color:inherit}
 .vlog-actions .text-link{border:0;background:none;color:#9ac3c8;text-decoration:underline;cursor:pointer;padding:8px 0;}
 @media(max-width:850px){.section-card-grid,.section-map-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.section-card .card-link{min-height:300px;}}
 @media(max-width:600px){.section-card-grid,.section-map-grid{grid-template-columns:1fr;}.section-card .card-link,.section-map-card .card-link{min-height:0;}.vlog-modal{padding:10px;}.vlog-dialog{padding:22px 16px;border-radius:18px;max-height:95vh;}.vlog-actions{align-items:flex-start;flex-direction:column;gap:10px;}.next-section-panel{padding:22px;}}
+
+/* Section reference lists */
+.references { margin: 2.5rem 0 3rem; padding: 1.5rem; border: 1px solid rgba(106, 221, 224, .22); border-radius: 22px; background: rgba(12, 38, 47, .62); }
+.reference-list { padding-left: 1.5rem; }
+.reference-list li { margin: 0 0 .85rem; padding-left: .25rem; color: var(--muted, #b3cbd0); overflow-wrap: anywhere; line-height: 1.65; }
+.reference-list a { color: var(--accent, #5ce1e6); text-decoration: underline; text-underline-offset: 3px; }
